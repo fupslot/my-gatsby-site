@@ -3,7 +3,7 @@ import { container } from "./Layout.module.css"
 
 function Layout(props) {
     return (
-        <section className={container}>{props.children}</section>
+        <section class="container mx-auto px-4">{props.children}</section>
     )
 }
 

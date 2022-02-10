@@ -4,6 +4,11 @@ module.exports = {
     siteUrl: `https://www.brodskysolutions.com`
   },
   plugins: [
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -22,14 +27,5 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: "gatsby-plugin-styled-components"
-    },
-    {
-      resolve: "gatsby-plugin-image"
-    },
-    {
-      resolve: "gatsby-plugin-sharp"
-    }
   ]
 };
