@@ -15,7 +15,7 @@ const IndexPage = () => {
         <p>
           Coud Private Spaces (CPS) is an attempt to rethink the idea of private networks 
           in the cloud. Explore new trends in Software Define Perimeter architecture and 
-          build tools for Zero Trust Application Access
+          build tools for Zero Trust Application Access (!!!)
         </p>
       </Layout>
     </main>
