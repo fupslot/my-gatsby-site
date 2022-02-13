@@ -4,8 +4,15 @@ module.exports = {
     baseUrl: `https://www.brodskysolutions.com`
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          formats: ["auto", "png"]
+        }
+      }
+    },
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-image",
     "gatsby-plugin-postcss",
