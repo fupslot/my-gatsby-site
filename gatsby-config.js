@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `My Gatsby Site`,
-    siteUrl: `https://www.brodskysolutions.com`
+    title: "Cloud Safe Guard",
+    baseUrl: `https://www.brodskysolutions.com`
   },
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     "gatsby-plugin-sass",
     {
@@ -14,18 +15,22 @@ module.exports = {
       options: {
         name: "data",
         path: `${__dirname}/src/data`,
-        ignore: [
-          "**\/.**",
-          "**/*.un~",
-          "**/.DS_Store",
-          "**/.gitignore",
-          "**/.npmignore",
-          "**/.babelrc",
-          "**/yarn.lock",
-          "**/node_modules",
-          "../**/dist/**",
-        ]
       }
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      }
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        footnotes: true,
+        gfm: true,
+        plugins: []
+      }
+    }
   ]
 };

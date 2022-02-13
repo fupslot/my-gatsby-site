@@ -1,9 +1,12 @@
 import React from "react"
-import { container } from "./Layout.module.css"
+import SEO from "../../components/SEO"
 
-function Layout(props) {
+function Layout({ post, children }) {
     return (
-        <section class="container mx-auto px-4">{props.children}</section>
+        <>
+            <SEO post={post} />
+            <section class="container mx-auto px-4">{children}</section>
+        </>
     )
 }
 
