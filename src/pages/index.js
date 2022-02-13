@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
       <Layout post={frontmatter}>
         <Menu />
         <div>
-          <Img fluid={frontmatter.featured.childImageSharp.fluid} />
+          {/* <Img fluid={frontmatter.featured.childImageSharp.fluid} /> */}
           <h3 class="text-2xl mt-10">{frontmatter.title}</h3>
           <p class="my-8 p-4 bg-red-100" dangerouslySetInnerHTML={{__html: html}} />
         </div>
@@ -36,13 +36,6 @@ query RootPage {
       keywords
       title
       slug
-      featured {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   }
 }
