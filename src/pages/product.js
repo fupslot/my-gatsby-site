@@ -4,7 +4,6 @@ import "../css/index.css"
 import Layout from "../components/Layout/Layout"
 import Menu from "../components/Menu"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 // markup
 const ProductPage = ({ data }) => {
@@ -16,8 +15,8 @@ const ProductPage = ({ data }) => {
       <Layout post={frontmatter}>
         <Menu />
         <div>
-          <h3 class="text-2xl mt-10">{frontmatter.title}</h3>
-          <p class="my-8 p-4 bg-red-100" dangerouslySetInnerHTML={{__html: html}} />
+          <h3 className="text-2xl mt-10">{frontmatter.title}</h3>
+          <p className="my-8 p-4 bg-red-100" dangerouslySetInnerHTML={{__html: html}} />
         </div>
       </Layout>
     </main>
