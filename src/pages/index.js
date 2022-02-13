@@ -1,24 +1,24 @@
 import * as React from "react"
-// import {Link} from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import "../css/index.css"
 import Layout from "../components/Layout/Layout"
 import Menu from "../components/Menu"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 // markup
 const IndexPage = ({ data }) => {
   const { html } = data.markdownRemark
   const { frontmatter } = data.markdownRemark
 
+  const image = getImage(frontmatter.featured)
+
   return (
     <main className="bg-pink-50">
       <Layout post={frontmatter}>
         <Menu />
         <div>
-          {/* <Img fluid={frontmatter.featured.childImageSharp.fluid} /> */}
+          <GatsbyImage image={image} />
           <h3 class="text-2xl mt-10">{frontmatter.title}</h3>
           <p class="my-8 p-4 bg-red-100" dangerouslySetInnerHTML={{__html: html}} />
         </div>
@@ -36,10 +36,14 @@ query RootPage {
       keywords
       title
       slug
+      featured {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
     }
   }
 }
-
 `
 
 export default IndexPage
