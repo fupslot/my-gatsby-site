@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import "../css/index.css"
+
 import { ChevronDoubleLeftIcon } from "@heroicons/react/solid"
 
 const SSRPage = ({ serverData }) => (
