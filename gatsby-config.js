@@ -1,9 +1,20 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Cloud Safe Guard",
     baseUrl: `https://www.brodskysolutions.com`
   },
   plugins: [
+    {
+      resolve: "gatsby-source-buttercms",
+      options: {
+        authToken: process.env.BUTTERCMS_AUTH_TOKEN,
+        preview: 1
+      }
+    },
     {
       resolve: "gatsby-plugin-sharp",
       options: {

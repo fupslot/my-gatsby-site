@@ -2538,7 +2538,7 @@ axe-core@^4.3.5:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.4.1.tgz#7dbdc25989298f9ad006645cd396782443757413"
   integrity sha512-gd1kmb21kwNuWr6BQz8fv6GNECPBnUasepcoLbekws23NVBLODdsClRZ+bQ8+9Uomf3Sm3+Vwn0oYG9NvwnJCw==
 
-axios@^0.21.1:
+axios@^0.21.1, axios@~0.21.1:
   version "0.21.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
@@ -2875,6 +2875,13 @@ busboy@^0.2.11:
   dependencies:
     dicer "0.2.5"
     readable-stream "1.1.x"
+
+buttercms@^1.1.1:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/buttercms/-/buttercms-1.2.8.tgz#d98e2f246908fe49cda80a12cddc953e0b064333"
+  integrity sha512-w69vM+XAkQuga4e8x+iglC+UITIW2Mir5hjEc6RYsZAzcNiXrm+BM7VU3iai9SLavuA/M13WBKQ0Ervljca6vg==
+  dependencies:
+    axios "~0.21.1"
 
 bytes@3.0.0:
   version "3.0.0"
@@ -4042,6 +4049,11 @@ dot-prop@^5.2.0:
   integrity sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==
   dependencies:
     is-obj "^2.0.0"
+
+dotenv@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.0.tgz#c619001253be89ebb638d027b609c75c26e47411"
+  integrity sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==
 
 dotenv@^8.6.0:
   version "8.6.0"
@@ -5233,6 +5245,13 @@ gatsby-sharp@^0.1.0:
   dependencies:
     "@types/sharp" "^0.29.5"
     sharp "^0.29.3"
+
+gatsby-source-buttercms@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-buttercms/-/gatsby-source-buttercms-2.2.3.tgz#be677e3f79354141085ac2e60867408abfd34802"
+  integrity sha512-VYD0co71VnE1xcge5lk+nCFubON0mbzRMbJaY/KBwZ24IDoua3E4GMEJ/zrRMHOn81GPU0u/S5kQVlrbUYaGfw==
+  dependencies:
+    buttercms "^1.1.1"
 
 gatsby-source-filesystem@^4.7.0:
   version "4.7.0"
