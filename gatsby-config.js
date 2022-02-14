@@ -23,6 +23,18 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: "gatsby-plugin-gdpr-cookies",
+      options: {
+        googleAnalytics: {
+          trackinId: process.env.GOOGLE_ANALYTICS_ID,
+          cookieName: "cookie-consent",
+          anonymize: true,
+          allowAdFeatures: false
+        },
+        environments: ["development", "production"]
+      }
+    },
     "gatsby-plugin-styled-components",
     "gatsby-transformer-sharp",
     "gatsby-plugin-image",

@@ -3,6 +3,7 @@ import * as React from "react"
 import "../css/index.css"
 import { graphql } from "gatsby"
 import Menu from "../components/Menu"
+import CookieBar from "../components/CookieBar/CookieBar"
 
 const Feature = ({ content }) => {
   return (
@@ -22,6 +23,7 @@ const IndexPage = ({ data }) => {
   return (
     <main className="h-screen bg-green-50">
     <section className="container mx-auto">
+      <CookieBar />
       <Menu />
       <div className="pt-20 pb-10">
         <h3 className="text-4xl text-center text-blue-800 font-bold">
