@@ -2,6 +2,7 @@ import * as React from "react"
 
 import "../css/index.css"
 import { graphql } from "gatsby"
+import Menu from "../components/Menu"
 
 const Feature = ({ content }) => {
   return (
@@ -18,11 +19,10 @@ const IndexPage = ({ data }) => {
   const page = data.butterPage
   const vpn = (page.vpn || [])[0]
 
-  console.log(vpn)
-
   return (
     <main className="h-screen bg-green-50">
     <section className="container mx-auto">
+      <Menu />
       <div className="pt-20 pb-10">
         <h3 className="text-4xl text-center text-blue-800 font-bold">
           {page.headline}
