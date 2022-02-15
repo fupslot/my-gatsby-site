@@ -27,10 +27,9 @@ module.exports = {
       resolve: "gatsby-plugin-gdpr-cookies",
       options: {
         googleAnalytics: {
-          trackinId: process.env.GOOGLE_ANALYTICS_ID,
-          cookieName: "cookie-consent",
+          trackingId: process.env.GOOGLE_ANALYTICS_ID,
+          cookieName: "gatsby-gdpr-google-analytics",
           anonymize: true,
-          allowAdFeatures: false
         },
         environments: ["development", "production"]
       }
